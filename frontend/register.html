@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h1 class="title">REGISTER</h1>
+    </div>
+    <div class="section">
+      <h2 class="subtitle">Choose Student or Teacher.<br>Fill out the form</h2>
+      <div class="content">
+        <div class="button">
+          <div class="button-box">
+            <button type="button" class="toggle-btn">STUDENT</button>
+            <button type="button" class="toggle-btn">TEACHER</button>
+          </div>
+        </div>
+        <div class="form-container">
+          <form id="studentForm" class="form" enctype="multipart/form-data">
+            <div class="avatar-container">
+              <img src="default-avatar.png" alt="Avatar" id="avatar" />
+              <input type="file" id="studentPhoto" accept="image/*" required />
+            </div> 
+            <input type="text" id="studentName" placeholder="Student Name" required />
+            <select id="studentClass" required>
+              <option value="" disabled selected>Class</option>
+              <option value="class-8">Class 8</option>
+              <option value="class-9">Class 9</option>
+              <option value="class-10">Class 10</option>
+              <option value="class-11">Class 11</option>
+              <option value="class-12">Class 12</option>
+              <!-- Add more class options if needed -->
+            </select>
+            <input type="tel" id="studentPhoneNumber" placeholder="Student Phone Number" required />
+            <input type="tel" id="parentPhoneNumber" placeholder="Parent Phone Number" required />
+            <input type="email" id="studentEmail" placeholder="Email" required />
+          </form>
+          <form id="teacherForm" class="form" style="display: none;">
+            <input type="text" id="teacherName" placeholder="Teacher's Name" required /><br><br>
+            <div class="checkbox-group"> Teaching Classes:
+                <label><input type="checkbox" name="teachingClass" value="class-8">Class 8</label>
+                <label><input type="checkbox" name="teachingClass" value="class-9">Class 9</label>
+                <label><input type="checkbox" name="teachingClass" value="class-10">Class 10</label>
+                <label><input type="checkbox" name="teachingClass" value="class-11">Class 11</label>
+                <label><input type="checkbox" name="teachingClass" value="class-12">Class 12</label>
+                <!-- Add more class options if needed -->
+              </div><br>
+            <input type="text" id="teachingSubject" placeholder="Teaching Subject" required />
+            <input type="tel" id="teacherPhoneNumber" placeholder="Phone Number" required />
+            <input type="email" id="teacherEmail" placeholder="Email" required />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <button id="registerButton" class="register-button">REGISTER</button>
+    </div>
+    <div class="footer">
+      © 2023 Entrance World All Rights Reserved
+    </div>
+  </div>
+  <script src="reg.js"></script>
+</body>
+</html>
