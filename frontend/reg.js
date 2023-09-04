@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   function sendUserData(data) {
-    fetch("http://ewdata.onrender.com/register", {
+    fetch("https://ewdata.onrender.com/register", {
       method: "POST",
       body: data,
     })
