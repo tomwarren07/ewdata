@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   function sendUserData(data) {
-    fetch("http://localhost:3000/register", {
+    fetch("http://ewdata.onrender.com/register", {
       method: "POST",
       body: data,
     })
